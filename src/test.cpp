@@ -8,7 +8,7 @@ class CfgPatches {
         author = "Tonic";
     };
 };
- 
+
 class CfgFunctions {
     class MySQL_Database {
         tag = "DB";
@@ -28,7 +28,7 @@ class CfgFunctions {
             class updatePartial {};
         };
     };
- 
+
     class Life_System {
         tag = "life";
         class Wanted_Sys {
@@ -41,17 +41,17 @@ class CfgFunctions {
             class wantedCrimes {};
             class wantedProfUpdate {};
         };
- 
+
         class Jail_Sys {
             file = "\life_server\Functions\Jail";
             class jailSys {};
         };
- 
+
         class Client_Code {
             file = "\life_server\Functions\Client";
         };
     };
- 
+
     class TON_System {
         tag = "TON";
         class Systems {
@@ -78,7 +78,7 @@ class CfgFunctions {
             class handleBlastingCharge {};
             class terrainSort {};
         };
- 
+
         class Housing {
             file = "\life_server\Functions\Housing";
             class addHouse {};
@@ -93,15 +93,15 @@ class CfgFunctions {
             class houseCleanup {};
             class houseGarage {};
         };
-     
+    
         class PowerPlant {
             file = "\life_server\Functions\PowerPlant";
-            class addPowerplant {};
-            class fetchPlayerPowerplants {};
-            class initPowerplants {};
-            class sellPowerplant {};
+            class fn_addPowerplant {};
+            class fn_fetchPlayerPowerplants {};
+            class fn_initPowerplants {};
+            class fn_sellPowerplant {};
         };
-         
+        
         class Gangs {
             file = "\life_server\Functions\Gangs";
             class insertGang {};
@@ -109,21 +109,21 @@ class CfgFunctions {
             class removeGang {};
             class updateGang {};
         };
- 
+
         class Actions {
             file = "\life_server\Functions\Actions";
             class pickupAction {};
         };
- 
+
         class PlayTime {
             file = "\life_server\Functions\PlayTime";
             class setPlayTime {};
             class getPlayTime {};
         };
-         
+        
     };
 };
- 
+
 class CfgVehicles {
     class Car_F;
     class CAManBase;
@@ -131,7 +131,7 @@ class CfgVehicles {
     class Civilian_F : Civilian {
         class EventHandlers;
     };
- 
+
     class C_man_1 : Civilian_F {
         class EventHandlers: EventHandlers {
             init = "(_this select 0) execVM ""\life_server\fix_headgear.sqf""";
